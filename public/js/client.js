@@ -12,8 +12,8 @@ weatherForm.addEventListener('submit', (e) => {
     messOne.textContent = 'Loading...'
     messTwo.textContent =  ''
 
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
-    response.json().then((data) => {
+    fetch('/weather?address=' + location).then((response) => {
+        response.json().then((data) => {
         if(data.error){
             messOne.textContent = data.error
         } else{
